@@ -1,0 +1,12 @@
+Server:
+  port: 8082
+
+spring:
+  datasource:
+    password: mysqlpw
+    url: jdbc:mysql://localhost:3307/usermanage
+    username: user
+    driverClassName: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
