@@ -3,10 +3,12 @@ Server:
 
 spring:
   datasource:
-    password: mysqlpw
-    url: jdbc:mysql://localhost:3307/usermanage
-    username: user
-    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:h2:mem:mydb
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
   jpa:
-    hibernate:
-      ddl-auto: update
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+  h2:
+    console.enabled: true
